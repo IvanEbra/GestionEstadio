@@ -1,0 +1,42 @@
+﻿<Page x:Class="GestionEstadio.PaginaEstadio"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GestionEstadio"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaginaEstadio" Width="1028" Height="488
+      ">
+
+    <Grid>
+        <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Height="32" Margin="31,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" GotFocus="TxtBuscar_GotFocus" LostFocus="TxtBuscar_LostFocus" Text="Buscar nombre"/>
+        <Button x:Name="btnBuscar" HorizontalAlignment="Left" Height="32" Margin="262,10,0,0" VerticalAlignment="Top" Width="90" Content="Buscar" Click="BtnBuscar_Click"/>
+        <Button x:Name="btnAñadir" Content="Añadir" HorizontalAlignment="Left" Height="32" Margin="168,144,0,0" VerticalAlignment="Top" Width="158" Click="BtnAñadir_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Height="32" Margin="399,144,0,0" VerticalAlignment="Top" Width="158" Click="BtnEliminar_Click"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="158" Margin="641,144,0,0" Click="BtnActualizar_Click"/>
+        <Grid x:Name="gridDatosEstadio" HorizontalAlignment="Left" Height="50" Margin="10,89,0,0" VerticalAlignment="Top" Width="951">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="380*"/>
+                <ColumnDefinition Width="571*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtIdEstadio" Text="{Binding EstadioId, Mode=TwoWay}" HorizontalAlignment="Left" Height="32" Margin="21,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsEnabled="False"/>
+            <TextBox x:Name="txtNombreEstadio" Text="{Binding nombreEstadio, Mode=TwoWay}" HorizontalAlignment="Left" Height="32" Margin="252,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="txtDireccion" Text="{Binding direccion, Mode=TwoWay}" HorizontalAlignment="Left" Height="32" Margin="105,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Grid.Column="1"/>
+            <ComboBox x:Name="cbNumeroPistas" HorizontalAlignment="Left" Margin="346,10,0,0" VerticalAlignment="Top" Width="215" Height="32" Grid.Column="1"/>
+        </Grid>
+        <DataGrid x:Name="dgEstadios" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="10,192,0,0" VerticalAlignment="Top" Width="1008" SelectionChanged="DgUsuarios_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Estadio Id" Binding="{Binding EstadioId}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombreEstadio}" />
+                <DataGridTextColumn Header="Dirección" Binding="{Binding direccion}" />
+                <DataGridTextColumn Header="Número de pistas" Binding="{Binding numeroPistas}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="labelEstadioId" Content="Estadio Id:" HorizontalAlignment="Left" Height="24" Margin="31,60,0,0" VerticalAlignment="Top" Width="63"/>
+        <Label x:Name="labelNombreEstadio" Content="Nombre estadio:" HorizontalAlignment="Left" Height="24" Margin="263,60,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="labelDireccionEstadio" Content="Dirección estadio:" HorizontalAlignment="Left" Height="24" Margin="502,60,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label x:Name="labelNumeroPistas" Content="Número pistas:" HorizontalAlignment="Left" Height="24" Margin="742,60,0,0" VerticalAlignment="Top" Width="106"/>
+
+    </Grid>
+</Page>

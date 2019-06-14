@@ -1,0 +1,16 @@
+﻿<Window x:Class="GestionEstadio.VentanaAyuda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionEstadio"
+        mc:Ignorable="d"
+        Title="VentanaAyuda" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="labelQuehacerPrimero" Content="¿Qué hacer primero?" HorizontalAlignment="Left" Height="63" Margin="55,10,0,0" VerticalAlignment="Top" Width="363" FontWeight="Bold" FontSize="36"/>
+        <Label x:Name="labelQuehacerdescripcion" Content="¡Si no tienes cuenta registrate! Si ya posees una cuenta prueba a iniciar sesión." HorizontalAlignment="Left" Margin="55,78,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="labelQuehacerDentro" Content="¿Qué hacer en la app?" HorizontalAlignment="Left" Height="62" Margin="55,148,0,0" VerticalAlignment="Top" Width="382" FontWeight="Bold" FontSize="36"/>
+        <Label x:Name="labelQuehacerenapdescripcion" Content="Selecciona un item del menú para gestionar y ver que hay en el. &#xA;&#xA;Algunos items solo estan disponibles para los usuarios administradores" HorizontalAlignment="Left" Margin="55,215,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</Window>

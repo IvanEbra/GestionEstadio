@@ -1,0 +1,51 @@
+﻿<Window x:Class="GestionEstadio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestionEstadio"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600.495" Width="1035.644">
+    <Grid>
+        <Menu x:Name="menuOpciones" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="1029" Margin="0,0,-1,0" FontSize="20">
+            <MenuItem x:Name="menuInicio" Header="Inicio" Click="menuInicio_Click_5">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/inicio.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuUsuario" Header="Usuario" Click="menuUsuario_Click" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="usuarios.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuDeporte" Header="Deporte" Click="menuDeporte_Click_1" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/deporrtes.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuEquipo" Header="Equipo" Click="menuEquipo_Click_2" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/equipo.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuEstadio" Header="Estadio" Click="menuEstadio_Click_3" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/estadioicono.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuJornada" Header="Jornada" Click="menuJornada_Click_4" IsEnabled="False">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/jornada.jpg"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem x:Name="menuAyuda" Header="Ayuda" Click="MenuAyuda_Click">
+                <MenuItem.Icon>
+                    <Image Source="bin/Debug/Iconos/ayuda.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </Menu>
+        <Frame x:Name="framePaginas" Content="Frame" HorizontalAlignment="Left" Height="488
+               " Margin="0,66,0,0" VerticalAlignment="Top" Width="1028" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
